@@ -1,0 +1,13 @@
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+    <clipPath id="half">
+      <rect x="0" y="0" width="100" height="50" />
+    </clipPath>
+  </defs>
+ <g>
+  <title>LoopMate</title>
+  <ellipse stroke-width="10" stroke="#ff7f00" ry="25" rx="25" id="orangloop" cy="50" cx="65" fill="none"/>
+  <ellipse stroke-width="10" stroke="#5fbf00" ry="25" rx="25" id="greenloop" cy="50" cx="35" fill="none"/>
+  <ellipse stroke-width="10" stroke="#ff7f00" ry="25" rx="25" id="orangclip" cy="50" cx="65" fill="none"  clip-path="url(#half)" />
+ </g>
+</svg>
