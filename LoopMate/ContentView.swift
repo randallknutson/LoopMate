@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import MultipeerKit
 
 struct ContentView: View {
-    let defaults = UserDefaults.standard
+    @StateObject var loops = Loops(loops: [Loop(name: "Liesl"), Loop(name: "Brielle")])
     
     var body: some View {
         NavigationView {
-            LoopList(loops: [Loop(name: "Liesl"), Loop(name: "Brielle")])
+            LoopList(loops: loops)
         }
     }
 }

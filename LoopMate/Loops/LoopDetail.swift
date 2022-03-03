@@ -14,17 +14,17 @@ struct LoopDetail: View {
         TabView {
             Text("Dashboard")
                 .tabItem {
-                    Image(systemName: "1.square.fill")
+                    Image(systemName: "gauge")
                     Text("Dashboard")
                 }
             Text("Enter Meal")
                 .tabItem {
-                    Image(systemName: "2.square.fill")
+                    Image(systemName: "mouth")
                     Text("Meal")
                 }
             Text("Deliver Bolus")
                 .tabItem {
-                    Image(systemName: "3.square.fill")
+                    Image(systemName: "cross.case")
                     Text("Bolus")
                 }
         }

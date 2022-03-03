@@ -17,9 +17,17 @@
 		84D4781D27CFC0650089F396 /* Loop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4781827CFC0650089F396 /* Loop.swift */; };
 		84D4781E27CFC0650089F396 /* LoopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4781927CFC0650089F396 /* LoopRow.swift */; };
 		84D4782727CFCE260089F396 /* LoopEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4782627CFCE260089F396 /* LoopEdit.swift */; };
-		84D4782A27CFDE310089F396 /* MultipeerKit in Frameworks */ = {isa = PBXBuildFile; productRef = 84D4782927CFDE310089F396 /* MultipeerKit */; };
 		84D4784A27CFFE790089F396 /* Loops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4784927CFFE790089F396 /* Loops.swift */; };
-		84D4784C27D009F10089F396 /* LoopMate.svg in Resources */ = {isa = PBXBuildFile; fileRef = 84D4784B27D009F10089F396 /* LoopMate.svg */; };
+		84D4784E27D00D940089F396 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 84D4784D27D00D940089F396 /* README.md */; };
+		84D4785127D01D660089F396 /* playstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D4784F27D01D650089F396 /* playstore.png */; };
+		84D4785227D01D660089F396 /* appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D4785027D01D650089F396 /* appstore.png */; };
+		84D4785627D01DBE0089F396 /* LoopMate.svg in Resources */ = {isa = PBXBuildFile; fileRef = 84D4785527D01DBE0089F396 /* LoopMate.svg */; };
+		84D4785B27D10C910089F396 /* MultipeerConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4785A27D10C910089F396 /* MultipeerConnectivity.swift */; };
+		84D4785D27D10C9C0089F396 /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4785C27D10C9C0089F396 /* Bluetooth.swift */; };
+		84D4785F27D10CA80089F396 /* PushNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4785E27D10CA80089F396 /* PushNotifications.swift */; };
+		84D4786127D10D6B0089F396 /* Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4786027D10D6B0089F396 /* Sync.swift */; };
+		84DCB79227D13B1C001D81A6 /* CentralManager+Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DCB79127D13B1C001D81A6 /* CentralManager+Singleton.swift */; };
+		84DCB79527D13B60001D81A6 /* AsyncBluetooth in Frameworks */ = {isa = PBXBuildFile; productRef = 84DCB79427D13B60001D81A6 /* AsyncBluetooth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +43,16 @@
 		84D4781927CFC0650089F396 /* LoopRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoopRow.swift; sourceTree = "<group>"; };
 		84D4782627CFCE260089F396 /* LoopEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopEdit.swift; sourceTree = "<group>"; };
 		84D4784927CFFE790089F396 /* Loops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loops.swift; sourceTree = "<group>"; };
-		84D4784B27D009F10089F396 /* LoopMate.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoopMate.svg; sourceTree = "<group>"; };
+		84D4784D27D00D940089F396 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		84D4784F27D01D650089F396 /* playstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playstore.png; sourceTree = "<group>"; };
+		84D4785027D01D650089F396 /* appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appstore.png; sourceTree = "<group>"; };
+		84D4785527D01DBE0089F396 /* LoopMate.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoopMate.svg; sourceTree = "<group>"; };
+		84D4785727D022430089F396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		84D4785A27D10C910089F396 /* MultipeerConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerConnectivity.swift; sourceTree = "<group>"; };
+		84D4785C27D10C9C0089F396 /* Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
+		84D4785E27D10CA80089F396 /* PushNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotifications.swift; sourceTree = "<group>"; };
+		84D4786027D10D6B0089F396 /* Sync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sync.swift; sourceTree = "<group>"; };
+		84DCB79127D13B1C001D81A6 /* CentralManager+Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CentralManager+Singleton.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84D4782A27CFDE310089F396 /* MultipeerKit in Frameworks */,
+				84DCB79527D13B60001D81A6 /* AsyncBluetooth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,10 +86,16 @@
 		84D4780527CFC0410089F396 /* LoopMate */ = {
 			isa = PBXGroup;
 			children = (
+				84DCB79027D13AEB001D81A6 /* Bluetooth */,
+				84D4785927D10C7E0089F396 /* Sync */,
+				84D4785727D022430089F396 /* Info.plist */,
+				84D4784D27D00D940089F396 /* README.md */,
 				84D4781427CFC0650089F396 /* Loops */,
 				84D4780627CFC0410089F396 /* LoopMateApp.swift */,
 				84D4780827CFC0410089F396 /* ContentView.swift */,
-				84D4784B27D009F10089F396 /* LoopMate.svg */,
+				84D4785027D01D650089F396 /* appstore.png */,
+				84D4784F27D01D650089F396 /* playstore.png */,
+				84D4785527D01DBE0089F396 /* LoopMate.svg */,
 				84D4780A27CFC0450089F396 /* Assets.xcassets */,
 				84D4780C27CFC0450089F396 /* Preview Content */,
 			);
@@ -101,6 +124,25 @@
 			path = Loops;
 			sourceTree = "<group>";
 		};
+		84D4785927D10C7E0089F396 /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				84D4785A27D10C910089F396 /* MultipeerConnectivity.swift */,
+				84D4785C27D10C9C0089F396 /* Bluetooth.swift */,
+				84D4785E27D10CA80089F396 /* PushNotifications.swift */,
+				84D4786027D10D6B0089F396 /* Sync.swift */,
+			);
+			path = Sync;
+			sourceTree = "<group>";
+		};
+		84DCB79027D13AEB001D81A6 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				84DCB79127D13B1C001D81A6 /* CentralManager+Singleton.swift */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,7 +160,7 @@
 			);
 			name = LoopMate;
 			packageProductDependencies = (
-				84D4782927CFDE310089F396 /* MultipeerKit */,
+				84DCB79427D13B60001D81A6 /* AsyncBluetooth */,
 			);
 			productName = LoopMate;
 			productReference = 84D4780327CFC0410089F396 /* LoopMate.app */;
@@ -131,6 +173,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
@@ -149,7 +194,7 @@
 			);
 			mainGroup = 84D477FA27CFC0410089F396;
 			packageReferences = (
-				84D4782827CFDE310089F396 /* XCRemoteSwiftPackageReference "MultipeerKit" */,
+				84DCB79327D13B60001D81A6 /* XCRemoteSwiftPackageReference "AsyncBluetooth" */,
 			);
 			productRefGroup = 84D4780427CFC0410089F396 /* Products */;
 			projectDirPath = "";
@@ -166,8 +211,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D4780E27CFC0450089F396 /* Preview Assets.xcassets in Resources */,
+				84D4785227D01D660089F396 /* appstore.png in Resources */,
 				84D4780B27CFC0450089F396 /* Assets.xcassets in Resources */,
-				84D4784C27D009F10089F396 /* LoopMate.svg in Resources */,
+				84D4784E27D00D940089F396 /* README.md in Resources */,
+				84D4785127D01D660089F396 /* playstore.png in Resources */,
+				84D4785627D01DBE0089F396 /* LoopMate.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,11 +227,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D4780927CFC0410089F396 /* ContentView.swift in Sources */,
+				84D4785B27D10C910089F396 /* MultipeerConnectivity.swift in Sources */,
+				84D4785D27D10C9C0089F396 /* Bluetooth.swift in Sources */,
+				84DCB79227D13B1C001D81A6 /* CentralManager+Singleton.swift in Sources */,
 				84D4782727CFCE260089F396 /* LoopEdit.swift in Sources */,
 				84D4781E27CFC0650089F396 /* LoopRow.swift in Sources */,
 				84D4781D27CFC0650089F396 /* Loop.swift in Sources */,
+				84D4786127D10D6B0089F396 /* Sync.swift in Sources */,
 				84D4784A27CFFE790089F396 /* Loops.swift in Sources */,
 				84D4781C27CFC0650089F396 /* LoopList.swift in Sources */,
+				84D4785F27D10CA80089F396 /* PushNotifications.swift in Sources */,
 				84D4781A27CFC0650089F396 /* LoopDetail.swift in Sources */,
 				84D4781B27CFC0650089F396 /* LoopHeader.swift in Sources */,
 				84D4780727CFC0410089F396 /* LoopMateApp.swift in Sources */,
@@ -320,6 +373,8 @@
 				DEVELOPMENT_TEAM = W8T2N36AYW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LoopMate/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Connect to Loop instances";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -349,6 +404,8 @@
 				DEVELOPMENT_TEAM = W8T2N36AYW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LoopMate/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Connect to Loop instances";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -391,21 +448,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		84D4782827CFDE310089F396 /* XCRemoteSwiftPackageReference "MultipeerKit" */ = {
+		84DCB79327D13B60001D81A6 /* XCRemoteSwiftPackageReference "AsyncBluetooth" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/insidegui/MultipeerKit";
+			repositoryURL = "https://github.com/manolofdez/AsyncBluetooth";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		84D4782927CFDE310089F396 /* MultipeerKit */ = {
+		84DCB79427D13B60001D81A6 /* AsyncBluetooth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 84D4782827CFDE310089F396 /* XCRemoteSwiftPackageReference "MultipeerKit" */;
-			productName = MultipeerKit;
+			package = 84DCB79327D13B60001D81A6 /* XCRemoteSwiftPackageReference "AsyncBluetooth" */;
+			productName = AsyncBluetooth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -10,23 +10,28 @@ import SwiftUI
 struct LoopRow: View {
     let loop: Loop
     
+    let relativeDateFormatter = RelativeDateTimeFormatter()
+    
     var body: some View {
-        HStack {
+        relativeDateFormatter.dateTimeStyle = .named
+        
+        return HStack {
             Image(systemName: "person.crop.circle")
                 .resizable()
                 .frame(width: 48, height: 48)
             
             VStack(alignment: .leading) {
                 Text(loop.name)
-                HStack(alignment: .center, spacing: 5) {
-                    Text(Date(), style: .relative)
-                    Text("ago")
-                }
+                Text(Date().addingTimeInterval(-120), formatter: relativeDateFormatter)
             }
             
             Spacer()
             
-            Text("100")
+            VStack(alignment: .trailing){
+                Text("BG : 100").font(.caption)
+                Text("IOB: 100").font(.caption)
+                Text("COB: 100").font(.caption)
+            }
         }
         .padding()
     }

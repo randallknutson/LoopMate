@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 class Loops: ObservableObject {
-    @Published var loops : [Loop]
+    @Published public var loops : [Loop]
     var cancellables = [AnyCancellable]()
 
     init(loops: [Loop]){

@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct LoopList: View {
-    @State var loops: [Loop]
+    @ObservedObject var loops: Loops
+    @State private var isAddingLoop = false
     
     var body: some View {
         VStack {
             List {
-                ForEach($loops.indices, id: \.self) { index in
-                    let loop = loops[index]
+                ForEach($loops.loops.indices, id: \.self) { index in
+                    let loop = loops.loops[index]
                     ZStack {
                         NavigationLink(destination: LoopDetail().environmentObject(loop)) {
                             EmptyView()
@@ -26,7 +27,7 @@ struct LoopList: View {
                     }
                     .swipeActions(allowsFullSwipe: false) {
                         Button(role: .destructive) {
-                            loops.remove(at: index)
+                            loops.loops.remove(at: index)
                         } label: {
                             Label("Delete", systemImage: "trash.fill")
                         }
@@ -35,18 +36,16 @@ struct LoopList: View {
             }
             .listStyle(PlainListStyle())
             .refreshable {
-                do {
-                    print("Refresh")
-                }
-                catch {
-                    print("Error!")
-                }
+                print("Refresh")
             }
+            
+            NavigationLink(destination: LoopEdit().environmentObject(loops.loops.last!), isActive: $isAddingLoop) { EmptyView() }
         }
         .navigationTitle("Loops")
         .toolbar {
             Button(action: {
-                loops.append(Loop())
+                loops.loops.append(Loop())
+                isAddingLoop = true
             }) {
                 Image(systemName: "plus").imageScale(.large)
             }
@@ -57,7 +56,7 @@ struct LoopList: View {
 struct LoopList_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            LoopList(loops: [Loop(name: "Liesl"), Loop(name: "Brielle")])
+            LoopList(loops: Loops(loops: [Loop(name: "Liesl"), Loop(name: "Brielle")]))
         }
     }
 }
