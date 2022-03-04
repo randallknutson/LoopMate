@@ -16,9 +16,7 @@ struct LoopRow: View {
         relativeDateFormatter.dateTimeStyle = .named
         
         return HStack {
-            Image(systemName: "person.crop.circle")
-                .resizable()
-                .frame(width: 48, height: 48)
+            LoopImage()
             
             VStack(alignment: .leading) {
                 Text(loop.name)

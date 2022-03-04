@@ -11,6 +11,8 @@ import MultipeerKit
 struct LoopEdit: View {
     @EnvironmentObject var loop: Loop
     @EnvironmentObject var dataSource: MultipeerDataSource
+    @State private var showingImagePicker = false
+    @State private var image: UIImage?
     
     func invitePeer(peer: Peer) {
         print(peer.name)
@@ -20,6 +22,9 @@ struct LoopEdit: View {
         VStack {
             Form {
                 Section {
+                    Button { showingImagePicker = true } label: {
+                        LoopImage(image: image, width: 64, height: 64)
+                    }
                     TextField("Name", text: $loop.name)
                 }
             }
@@ -54,6 +59,9 @@ struct LoopEdit: View {
         }
         .onDisappear {
             dataSource.transceiver.stop()
+        }
+        .sheet(isPresented: $showingImagePicker) {
+            ImagePicker(image: $image)
         }
     }
 }

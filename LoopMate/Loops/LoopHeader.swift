@@ -12,9 +12,7 @@ struct LoopHeader: View {
     
     var body: some View {
         HStack {
-            Image(systemName: "person.crop.circle")
-                .resizable()
-                .frame(width: 32, height: 32)
+            LoopImage(width: 32, height: 32)
             Text(loop.name)
                 .font(.headline)
         }
