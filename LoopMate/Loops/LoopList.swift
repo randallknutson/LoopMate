@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoopList: View {
-    @ObservedObject var loops: Loops
+    @ObservedObject var loops: LoopsDataSource
     @State private var isAddingLoop = false
     
     var body: some View {
@@ -16,7 +16,7 @@ struct LoopList: View {
             List {
                 ForEach($loops.loops.indices, id: \.self) { index in
                     let loop = loops.loops[index]
-                    ZStack {
+                    VStack {
                         NavigationLink(destination: LoopDetail().environmentObject(loop)) {
                             EmptyView()
                         }
@@ -26,20 +26,20 @@ struct LoopList: View {
                             .listRowInsets(EdgeInsets())
                     }
                     .swipeActions(allowsFullSwipe: false) {
-                        Button(role: .destructive) {
-                            loops.loops.remove(at: index)
-                        } label: {
-                            Label("Delete", systemImage: "trash.fill")
-                        }
+                        removeButton(index)
                     }
                 }
             }
+            .padding(.leading, -20.0)
             .listStyle(PlainListStyle())
             .refreshable {
                 print("Refresh")
             }
             
-            NavigationLink(destination: LoopEdit().environmentObject(loops.loops.last!), isActive: $isAddingLoop) { EmptyView() }
+            if isAddingLoop {
+                NavigationLink(destination: LoopEdit().environmentObject(loops.loops.last!), isActive:
+                                $isAddingLoop) { EmptyView() }
+            }
         }
         .navigationTitle("Loops")
         .toolbar {
@@ -51,12 +51,20 @@ struct LoopList: View {
             }
         }
     }
+    
+    func removeButton(_ index: Int) -> some View {
+        Button(role: .destructive) {
+            loops.loops.remove(at: index)
+        } label: {
+            Label("Delete", systemImage: "trash.fill")
+        }
+    }
 }
 
 struct LoopList_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            LoopList(loops: Loops(loops: [Loop(name: "Liesl"), Loop(name: "Brielle")]))
+            LoopList(loops: LoopsDataSource())
         }
     }
 }

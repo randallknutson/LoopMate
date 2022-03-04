@@ -8,12 +8,12 @@
 import SwiftUI
 
 class Loop: Codable, Identifiable, ObservableObject {
-    var id: UUID = UUID()
+//    var id: UUID = UUID()
     @Published var name: String
     @Published var lastRefresh: Date?
     
     init() {
-        self.name = "Name"
+        self.name = "My Loop"
     }
       
     init(name: String) {
@@ -21,13 +21,13 @@ class Loop: Codable, Identifiable, ObservableObject {
     }
       
     enum CodingKeys: CodingKey {
-        case id, name, lastRefresh
+        case name, lastRefresh
     }
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
 
-        try container.encode(id, forKey: .id)
+//        try container.encode(id, forKey: .id)
         try container.encode(name, forKey: .name)
         try container.encode(lastRefresh, forKey: .lastRefresh)
     }
@@ -35,8 +35,8 @@ class Loop: Codable, Identifiable, ObservableObject {
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
-        id = try container.decode(UUID.self, forKey: .id)
+//        id = try container.decode(UUID.self, forKey: .id)
         name = try container.decode(String.self, forKey: .name)
-        lastRefresh = try container.decode(Date.self, forKey: .lastRefresh)
+        lastRefresh = try? container.decode(Date.self, forKey: .lastRefresh)
     }
 }

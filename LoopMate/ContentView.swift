@@ -9,11 +9,11 @@ import SwiftUI
 import MultipeerKit
 
 struct ContentView: View {
-    @StateObject var loops = Loops(loops: [Loop(name: "Liesl"), Loop(name: "Brielle")])
+    @StateObject var loopsDataSource = LoopsDataSource()
     
     var body: some View {
         NavigationView {
-            LoopList(loops: loops)
+            LoopList(loops: loopsDataSource)
         }
     }
 }
