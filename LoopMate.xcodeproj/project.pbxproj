@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843B413D27D2E42800EEDE0F /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B413C27D2E42800EEDE0F /* Store.swift */; };
+		843B414027D40C8800EEDE0F /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B413F27D40C8800EEDE0F /* Middleware.swift */; };
+		843B414227D40D1200EEDE0F /* LogMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B414127D40D1200EEDE0F /* LogMiddleware.swift */; };
+		843B414427D40D5500EEDE0F /* EchoMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B414327D40D5500EEDE0F /* EchoMiddleware.swift */; };
 		84A871A727D1899F008B74A8 /* MultipeerKit in Frameworks */ = {isa = PBXBuildFile; productRef = 84A871A627D1899F008B74A8 /* MultipeerKit */; };
+		84B092C027D7BA1B0047F9F4 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B092BF27D7BA1B0047F9F4 /* ApplicationState.swift */; };
+		84B092C227D7BAB50047F9F4 /* ApplicationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B092C127D7BAB50047F9F4 /* ApplicationAction.swift */; };
+		84B092C427D7BB590047F9F4 /* ApplicationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B092C327D7BB590047F9F4 /* ApplicationStore.swift */; };
+		84B092C627D7BD590047F9F4 /* reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B092C527D7BD590047F9F4 /* reducer.swift */; };
 		84C897A427D29482004A2984 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C897A327D29482004A2984 /* ImagePicker.swift */; };
 		84C897A627D29928004A2984 /* LoopImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C897A527D29928004A2984 /* LoopImage.swift */; };
 		84D4780727CFC0410089F396 /* LoopMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4780627CFC0410089F396 /* LoopMateApp.swift */; };
@@ -20,7 +28,6 @@
 		84D4781D27CFC0650089F396 /* Loop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4781827CFC0650089F396 /* Loop.swift */; };
 		84D4781E27CFC0650089F396 /* LoopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4781927CFC0650089F396 /* LoopRow.swift */; };
 		84D4782727CFCE260089F396 /* LoopEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4782627CFCE260089F396 /* LoopEdit.swift */; };
-		84D4784A27CFFE790089F396 /* LoopsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4784927CFFE790089F396 /* LoopsDataSource.swift */; };
 		84D4784E27D00D940089F396 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 84D4784D27D00D940089F396 /* README.md */; };
 		84D4785627D01DBE0089F396 /* LoopMate.svg in Resources */ = {isa = PBXBuildFile; fileRef = 84D4785527D01DBE0089F396 /* LoopMate.svg */; };
 		84D4785B27D10C910089F396 /* MultipeerConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4785A27D10C910089F396 /* MultipeerConnectivity.swift */; };
@@ -32,6 +39,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		843B413C27D2E42800EEDE0F /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		843B413F27D40C8800EEDE0F /* Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
+		843B414127D40D1200EEDE0F /* LogMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMiddleware.swift; sourceTree = "<group>"; };
+		843B414327D40D5500EEDE0F /* EchoMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoMiddleware.swift; sourceTree = "<group>"; };
+		84B092BF27D7BA1B0047F9F4 /* ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
+		84B092C127D7BAB50047F9F4 /* ApplicationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationAction.swift; sourceTree = "<group>"; };
+		84B092C327D7BB590047F9F4 /* ApplicationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStore.swift; sourceTree = "<group>"; };
+		84B092C527D7BD590047F9F4 /* reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reducer.swift; sourceTree = "<group>"; };
 		84C897A327D29482004A2984 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		84C897A527D29928004A2984 /* LoopImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopImage.swift; sourceTree = "<group>"; };
 		84D4780327CFC0410089F396 /* LoopMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoopMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +60,6 @@
 		84D4781827CFC0650089F396 /* Loop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loop.swift; sourceTree = "<group>"; };
 		84D4781927CFC0650089F396 /* LoopRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoopRow.swift; sourceTree = "<group>"; };
 		84D4782627CFCE260089F396 /* LoopEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopEdit.swift; sourceTree = "<group>"; };
-		84D4784927CFFE790089F396 /* LoopsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopsDataSource.swift; sourceTree = "<group>"; };
 		84D4784D27D00D940089F396 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		84D4785527D01DBE0089F396 /* LoopMate.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoopMate.svg; sourceTree = "<group>"; };
 		84D4785727D022430089F396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -69,9 +83,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		843B413E27D40C7D00EEDE0F /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				843B413F27D40C8800EEDE0F /* Middleware.swift */,
+				843B413C27D2E42800EEDE0F /* Store.swift */,
+				843B414127D40D1200EEDE0F /* LogMiddleware.swift */,
+				843B414327D40D5500EEDE0F /* EchoMiddleware.swift */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		84B092BE27D7BA050047F9F4 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				84B092BF27D7BA1B0047F9F4 /* ApplicationState.swift */,
+				84B092C127D7BAB50047F9F4 /* ApplicationAction.swift */,
+				84B092C327D7BB590047F9F4 /* ApplicationStore.swift */,
+				84B092C527D7BD590047F9F4 /* reducer.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		84C897A227D29471004A2984 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				843B413E27D40C7D00EEDE0F /* Redux */,
 				84C897A327D29482004A2984 /* ImagePicker.swift */,
 			);
 			path = Shared;
@@ -97,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				84C897A227D29471004A2984 /* Shared */,
+				84B092BE27D7BA050047F9F4 /* Store */,
 				84D4781427CFC0650089F396 /* Loops */,
 				84DCB79027D13AEB001D81A6 /* Bluetooth */,
 				84D4785927D10C7E0089F396 /* Sync */,
@@ -122,13 +160,12 @@
 		84D4781427CFC0650089F396 /* Loops */ = {
 			isa = PBXGroup;
 			children = (
+				84D4781727CFC0650089F396 /* LoopList.swift */,
+				84D4781927CFC0650089F396 /* LoopRow.swift */,
+				84D4782627CFCE260089F396 /* LoopEdit.swift */,
 				84D4781527CFC0650089F396 /* LoopDetail.swift */,
 				84D4781627CFC0650089F396 /* LoopHeader.swift */,
-				84D4781727CFC0650089F396 /* LoopList.swift */,
-				84D4782627CFCE260089F396 /* LoopEdit.swift */,
 				84D4781827CFC0650089F396 /* Loop.swift */,
-				84D4781927CFC0650089F396 /* LoopRow.swift */,
-				84D4784927CFFE790089F396 /* LoopsDataSource.swift */,
 				84C897A527D29928004A2984 /* LoopImage.swift */,
 			);
 			path = Loops;
@@ -240,17 +277,24 @@
 				84D4785B27D10C910089F396 /* MultipeerConnectivity.swift in Sources */,
 				84D4785D27D10C9C0089F396 /* Bluetooth.swift in Sources */,
 				84DCB79227D13B1C001D81A6 /* CentralManager+Singleton.swift in Sources */,
+				843B414427D40D5500EEDE0F /* EchoMiddleware.swift in Sources */,
 				84D4782727CFCE260089F396 /* LoopEdit.swift in Sources */,
 				84D4781E27CFC0650089F396 /* LoopRow.swift in Sources */,
 				84D4781D27CFC0650089F396 /* Loop.swift in Sources */,
 				84C897A627D29928004A2984 /* LoopImage.swift in Sources */,
 				84D4786127D10D6B0089F396 /* Sync.swift in Sources */,
-				84D4784A27CFFE790089F396 /* LoopsDataSource.swift in Sources */,
+				843B414027D40C8800EEDE0F /* Middleware.swift in Sources */,
+				84B092C227D7BAB50047F9F4 /* ApplicationAction.swift in Sources */,
+				843B413D27D2E42800EEDE0F /* Store.swift in Sources */,
+				843B414227D40D1200EEDE0F /* LogMiddleware.swift in Sources */,
 				84D4781C27CFC0650089F396 /* LoopList.swift in Sources */,
+				84B092C027D7BA1B0047F9F4 /* ApplicationState.swift in Sources */,
 				84D4785F27D10CA80089F396 /* PushNotifications.swift in Sources */,
+				84B092C627D7BD590047F9F4 /* reducer.swift in Sources */,
 				84D4781A27CFC0650089F396 /* LoopDetail.swift in Sources */,
 				84C897A427D29482004A2984 /* ImagePicker.swift in Sources */,
 				84D4781B27CFC0650089F396 /* LoopHeader.swift in Sources */,
+				84B092C427D7BB590047F9F4 /* ApplicationStore.swift in Sources */,
 				84D4780727CFC0410089F396 /* LoopMateApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

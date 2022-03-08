@@ -9,12 +9,17 @@ import SwiftUI
 import MultipeerKit
 
 struct ContentView: View {
-    @StateObject var loopsDataSource = LoopsDataSource()
+    @StateObject private var store = ApplicationStore(reducer: reducer, middleware: {
+        LogMiddleware()
+    })
+
+//    @StateObject var loopsDataSource = LoopsDataSource()
     
     var body: some View {
         NavigationView {
-            LoopList(loops: loopsDataSource)
+            LoopList()
         }
+        .environmentObject(store)
     }
 }
 

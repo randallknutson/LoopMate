@@ -9,8 +9,9 @@ import SwiftUI
 import MultipeerKit
 
 struct LoopEdit: View {
-    @EnvironmentObject var loop: Loop
+    @EnvironmentObject var store: ApplicationStore
     @EnvironmentObject var dataSource: MultipeerDataSource
+    @State var loop: Loop
     @State private var showingImagePicker = false
     @State private var image: UIImage?
     
@@ -58,6 +59,7 @@ struct LoopEdit: View {
             dataSource.transceiver.resume()
         }
         .onDisappear {
+            store.dispatch(action: .updateLoop(loop))
             dataSource.transceiver.stop()
         }
         .sheet(isPresented: $showingImagePicker) {
@@ -68,6 +70,6 @@ struct LoopEdit: View {
 
 struct LoopEdit_Previews: PreviewProvider {
     static var previews: some View {
-        LoopEdit().environmentObject(Loop())
+        LoopEdit(loop: Loop())
     }
 }

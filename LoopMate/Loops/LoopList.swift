@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct LoopList: View {
-    @ObservedObject var loops: LoopsDataSource
+    @EnvironmentObject var store: ApplicationStore
     @State private var isAddingLoop = false
     
     var body: some View {
         VStack {
             List {
-                ForEach($loops.loops.indices, id: \.self) { index in
-                    let loop = loops.loops[index]
+                ForEach(store.state.loops) { loop in
                     VStack {
-                        NavigationLink(destination: LoopDetail().environmentObject(loop)) {
+                        NavigationLink(destination: LoopDetail(loop: loop)) {
                             EmptyView()
                         }
                         .opacity(0.0)
@@ -26,7 +25,7 @@ struct LoopList: View {
                             .listRowInsets(EdgeInsets())
                     }
                     .swipeActions(allowsFullSwipe: false) {
-                        removeButton(index)
+                        removeButton(loop: loop)
                     }
                 }
             }
@@ -37,14 +36,14 @@ struct LoopList: View {
             }
             
             if isAddingLoop {
-                NavigationLink(destination: LoopEdit().environmentObject(loops.loops.last!), isActive:
+                NavigationLink(destination: LoopEdit(loop: store.state.loops.last!), isActive:
                                 $isAddingLoop) { EmptyView() }
             }
         }
         .navigationTitle("Loops")
         .toolbar {
             Button(action: {
-                loops.loops.append(Loop())
+                store.dispatch(action: .appendLoop(Loop()))
                 isAddingLoop = true
             }) {
                 Image(systemName: "plus").imageScale(.large)
@@ -52,9 +51,9 @@ struct LoopList: View {
         }
     }
     
-    func removeButton(_ index: Int) -> some View {
+    func removeButton(loop: Loop) -> some View {
         Button(role: .destructive) {
-            loops.loops.remove(at: index)
+            store.dispatch(action: .removeLoop(loop))
         } label: {
             Label("Delete", systemImage: "trash.fill")
         }
@@ -64,7 +63,8 @@ struct LoopList: View {
 struct LoopList_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            LoopList(loops: LoopsDataSource())
+            LoopList()
+                .environmentObject(ApplicationStore())
         }
     }
 }

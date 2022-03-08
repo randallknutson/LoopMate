@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoopHeader: View {
-    @ObservedObject var loop: Loop
+    var loop: Loop
     
     var body: some View {
         HStack {
@@ -22,6 +22,6 @@ struct LoopHeader: View {
 
 struct LoopHeader_Previews: PreviewProvider {
     static var previews: some View {
-        LoopHeader(loop: Loop(name: "Name"))
+        LoopHeader(loop: Loop())
     }
 }

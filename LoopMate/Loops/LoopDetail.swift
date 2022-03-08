@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoopDetail: View {
-    @EnvironmentObject var loop: Loop
+    var loop: Loop
     
     var body: some View {
         TabView {
@@ -36,7 +36,7 @@ struct LoopDetail: View {
             }
         }
         .toolbar {
-            NavigationLink(destination: LoopEdit().environmentObject(loop)) {
+            NavigationLink(destination: LoopEdit(loop: loop)) {
                 Image(systemName: "gearshape.fill")
                     .imageScale(.large)
             }
@@ -48,8 +48,7 @@ struct LoopDetail: View {
 struct LoopDetail_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            LoopDetail()
-                .environmentObject(Loop(name: "Name"))
+            LoopDetail(loop: Loop())
         }
     }
 }
